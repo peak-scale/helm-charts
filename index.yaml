@@ -3,6 +3,20 @@ entries:
   gangplank:
   - apiVersion: v2
     appVersion: 1.1.0
+    created: "2025-10-10T14:54:36.719535936Z"
+    description: Gangplank is a web application that allows users to authenticate
+      with an OIDC provider and configure their kubectl configuration file with the
+      OpenID Connect Tokens. Gangplank is based on Gangway, which is no longer maintained.
+    digest: fa7152a906c5890100d0eea753b08eaa59800088ac86939371b178c40cee7395
+    home: https://github.com/sighupio/gangplank
+    icon: https://avatars.githubusercontent.com/u/29403644?s=48&v=4
+    name: gangplank
+    type: application
+    urls:
+    - https://github.com/peak-scale/helm-charts/releases/download/gangplank-0.2.1/gangplank-0.2.1.tgz
+    version: 0.2.1
+  - apiVersion: v2
+    appVersion: 1.1.0
     created: "2025-10-10T14:43:08.077116629Z"
     description: Gangplank is a web application that allows users to authenticate
       with an OIDC provider and configure their kubectl configuration file with the
@@ -29,4 +43,4 @@ entries:
     urls:
     - https://github.com/peak-scale/helm-charts/releases/download/gangplank-0.1.0/gangplank-0.1.0.tgz
     version: 0.1.0
-generated: "2025-10-10T14:43:08.077131557Z"
+generated: "2025-10-10T14:54:36.719552056Z"
