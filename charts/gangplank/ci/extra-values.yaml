@@ -1,0 +1,46 @@
+podLabels:
+  custom-label: "yes"
+podAnnotations:
+  custom-annotation: "yes"
+image: 
+  pullPolicy: IfNotPresent
+replicas: 1
+automountServiceAccountToken: false
+volumeMounts:
+  - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+    name: token-ca
+volumes:
+  - name: token-ca
+    projected:
+      sources:
+      - serviceAccountToken:
+          path: token
+      - secret:
+          name: proxy-ingress-tls
+          items:
+          - key: tls.crt
+            path: ca.crt
+envFrom:
+- secretRef:
+     name: gangplank-secrets
+podSecurityContext:
+  seccompProfile:
+    type: RuntimeDefault
+securityContext:
+  runAsUser: 65534
+  runAsGroup: 65534
+  runAsNonRoot: true
+  privileged: false
+  allowPrivilegeEscalation: false
+  readOnlyRootFilesystem: true
+  capabilities:
+    drop:
+      - ALL
+resources:
+  requests:
+    cpu: 100m
+    memory: 100M
+  limits:
+    cpu: 1
+    memory: 1Gi
+
