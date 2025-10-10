@@ -6,3 +6,4 @@ chart-dirs:
 validate-chart-schema: false
 validate-maintainers: true
 validate-yaml: false
+target-branch: main
