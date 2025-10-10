@@ -27,6 +27,8 @@ serviceAccount:
 podAnnotations: {}
 podLabels: {}
 
+command: ["gangplank", "-config", "/etc/gangplank/config.yaml"]
+
 podSecurityContext:
   seccompProfile:
     type: RuntimeDefault
